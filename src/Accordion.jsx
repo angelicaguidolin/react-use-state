@@ -1,20 +1,16 @@
-import accordion from "../data/accordion"
-
-export default function Accordion(){
+import { useState } from "react"
+export default function Accordion({title,description}){
+    const [isOpen, setIsOpen] =useState(false)
+    const openAccordion=()=>{
+        setIsOpen((current)=> !current);
+    }
     return(
-        <div className="list-acc">
-            {accordion.map((accord, id)=>{
-                return(
-                    <div key={id} className="box-acc">
-                    <div className="title">
-                        <h3>{accord.title}</h3>
-                        <button className="accordion-btn">+</button>
-                    </div>
-                    <div>{accord.description}</div>
-                </div>
-                )
-            })}
-       
+        <div className="box-acc">
+        <div className="title">
+            <h3>{title}</h3>
+            <button className="accordion-btn" onClick={openAccordion}>+</button>
         </div>
+        {isOpen && <div>{description}</div>}
+    </div>
     )
 }
