@@ -4,3 +4,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* GENERAL*/
+.container{
+  max-width: 485px;
+  margin: auto;
+  padding: 25px 0;
+}
+/*ACCORDION LIST*/
+.list-acc > *:not(:last-child){
+  margin-bottom: 18px;
+}
+/*ACCORDION */
+.box-acc{
+  background-color: snow;
+}
+.box-acc > *{
+  padding: 10px;
+}
+.title{
+  display: flex;
+  background-color: #FFC008;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-btn{
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: transparent;
+}
